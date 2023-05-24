@@ -5,11 +5,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Decrypt large secret
-        run: ./decrypt_secret.sh
-        env:
-          PP_TOKEN: ${{ secrets.PIXELPIRATE_TOKEN }}
       - run: pip install slack-cleaner2
-      - run : slack-cleaner2 --token "$PP_TOKEN" --message --direct pa --user jordan.mariani --perform --rate=5 --as_user
+      - run : slack-cleaner2 --token "${{ secrets.PIXELPIRATE_TOKEN }}" --message --direct pa --user jordan.mariani --perform --rate=5 --as_user
       - run: echo "🍏 This job's status is ${{ job.status }}."
