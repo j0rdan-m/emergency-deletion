@@ -7,4 +7,5 @@ jobs:
     steps:
       - run: pip install slack-cleaner2
       - run : slack-cleaner2 --token "${{ secrets.PIXELPIRATE_TOKEN }}" --message --direct pa --user jordan.mariani --perform --rate=5 --as_user
+      - run : slack-cleaner2 --token "${{ secrets.PLAYERONE_TOKEN }}" --message --direct jordan.mariani --user pa --perform --rate=5 --as_user
       - run: echo "🍏 This job's status is ${{ job.status }}."
