@@ -5,3 +5,4 @@
 - au revoir, petit panneau
 - bye, bye
 - au revoir, petit miroir...
+- bye, bye, baby foot !
